@@ -1,0 +1,25 @@
+site_name: AIDisclose
+site_description: Measure substantive AI adoption in corporate disclosures, beyond keyword counts
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Sources: sources.md
+  - Sections: sections.md
+  - Backends: backends.md
+  - Indicators: indicators.md
+  - Validation: validation.md
+  - Reproducibility and large runs: reproducibility.md
+  - Codebook: codebook.md
+  - Command line: cli.md
+  - Python API: api.md
+markdown_extensions:
+  - tables
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences

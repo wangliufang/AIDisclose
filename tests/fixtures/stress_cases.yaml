@@ -1,0 +1,228 @@
+# Illustrative sentence cases for the rule backend. Some cases were used to
+# design the rules, so this fixture is not an independent validation dataset.
+# known_limitation marks cases that the current rules do not classify as expected.
+# Firm: Example Holdings Inc.
+- text: AI presents risks and challenges that could affect our business.
+  section: 10-K:1A
+  state: WEAK
+- text: We are integrating AI capabilities into our products, including our cloud-based analytics platform used by more than 4,000 enterprise customers.
+  section: 10-K:1
+  state: SUBSTANTIVE
+- text: The development and use of AI is subject to increasing regulatory scrutiny in the jurisdictions in which we operate.
+  section: 10-K:1A
+  state: NO_CLAIM
+- text: Issues in the development and use of artificial intelligence, combined with an uncertain regulatory environment, may result in reputational harm or liability.
+  section: 10-K:1A
+  state: WEAK
+  used_for_rule_design: true
+- text: During fiscal 2024, we introduced generative AI features in our design software that allow users to create images from text prompts.
+  section: 10-K:1
+  state: SUBSTANTIVE
+- text: We have established an AI governance committee to oversee the responsible use of AI across the Company.
+  section: 10-K:1
+  state: WEAK
+- text: Our fraud detection systems rely on machine learning algorithms that analyze billions of transactions each year.
+  section: 10-K:1
+  state: SUBSTANTIVE
+- text: We cannot predict how artificial intelligence will affect demand for our services.
+  section: 10-K:1A
+  state: NO_CLAIM
+  used_for_rule_design: true
+- text: Rapid advances in AI could enable new competitors to enter our markets.
+  section: 10-K:1A
+  state: NO_CLAIM
+- text: We expect to continue investing significantly in AI infrastructure, including data centers and GPUs.
+  section: 10-K:7
+  state: WEAK
+- text: Capital expenditures increased primarily due to investments in AI infrastructure.
+  section: 10-K:7
+  state: SUBSTANTIVE
+- text: We may not be able to compete effectively if we fail to keep pace with developments in artificial intelligence.
+  section: 10-K:1A
+  state: WEAK
+- text: Our employees use generative AI tools to draft marketing content.
+  section: 10-K:1
+  state: SUBSTANTIVE
+- text: The Group deployed machine learning models in its underwriting process in 2023.
+  section: full
+  state: SUBSTANTIVE
+- text: Like many companies, we are evaluating the potential uses of generative AI.
+  section: 10-K:1
+  state: WEAK
+- text: Machine learning is used to optimize energy consumption in our stores.
+  section: full
+  state: SUBSTANTIVE
+- text: Some of our vendors incorporate AI into the software we license from them.
+  section: 10-K:1A
+  state: NO_CLAIM
+- text: We do not have any material exposure to AI-related risks.
+  section: 10-K:1A
+  state: NO_CLAIM
+- text: The EU Artificial Intelligence Act entered into force in August 2024.
+  section: full
+  state: NO_CLAIM
+- text: Our research and development expenses include costs related to our AI research team.
+  section: 10-K:7
+  state: SUBSTANTIVE
+- text: AI-related revenue accounted for 12% of total revenue in fiscal 2024.
+  section: 10-K:7
+  state: SUBSTANTIVE
+- text: We believe our proprietary data gives us an advantage in developing AI models.
+  section: 10-K:1
+  state: WEAK
+- text: Customers increasingly expect AI-enabled features in banking apps.
+  section: full
+  state: NO_CLAIM
+- text: We have deployed an AI chatbot that resolves around 40% of customer service inquiries without human intervention.
+  section: full
+  state: SUBSTANTIVE
+- text: Malicious actors may use AI to create deepfakes and impersonate our executives.
+  section: 10-K:1C
+  state: NO_CLAIM
+- text: We use AI.
+  section: 10-K:1
+  state: WEAK
+- text: 'Our AI strategy focuses on three pillars: productivity, customer experience and new products.'
+  section: full
+  state: WEAK
+- text: Artificial intelligence (AI) refers to computer systems that perform tasks normally requiring human intelligence.
+  section: full
+  state: NO_CLAIM
+- text: Through our acquisition of a computer vision company in 2022, we added automated defect detection to our inspection systems.
+  section: 10-K:1
+  state: SUBSTANTIVE
+- text: We leverage AI to personalize recommendations for our 25 million loyalty members.
+  section: full
+  state: SUBSTANTIVE
+# Additional cases; failures are recorded as known limitations.
+- text: In fiscal 2025 we rolled out agentic AI workflows that reconcile supplier invoices across our European subsidiaries.
+  section: 10-K:1
+  state: SUBSTANTIVE
+  batch: 2
+- text: Our wealth advisors use a retrieval-augmented generation tool that answers questions from our internal research library.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+  known_limitation: true
+- text: We license large language models from third-party providers and fine-tune them on our proprietary claims data.
+  section: 10-K:1
+  state: SUBSTANTIVE
+  batch: 2
+  known_limitation: true
+- text: Project milestones are reported to the board using a RAG rating.
+  section: full
+  state: NO_CLAIM
+  batch: 2
+- text: We are piloting AI agents in our customer service operations.
+  section: 10-K:1
+  state: WEAK
+  batch: 2
+- text: AI agents developed by technology companies may compete with our advisory services.
+  section: 10-K:1A
+  state: NO_CLAIM
+  batch: 2
+- text: The rapid adoption of generative AI across the economy could reduce demand for some of our products.
+  section: 10-K:1A
+  state: NO_CLAIM
+  batch: 2
+- text: Our software engineers use GitHub Copilot, which has increased the speed of code reviews.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+- text: We have not deployed generative AI in any customer-facing application.
+  section: 10-K:1
+  state: NO_CLAIM
+  batch: 2
+- text: The use of AI in our hiring processes could expose us to claims of discrimination.
+  section: 10-K:1A
+  state: WEAK
+  batch: 2
+- text: Failures or errors in the AI models used in our trading systems could cause significant losses.
+  section: 10-K:1A
+  state: SUBSTANTIVE
+  batch: 2
+- text: We expect AI to play an increasingly important role in our industry.
+  section: 10-K:1
+  state: NO_CLAIM
+  batch: 2
+- text: During the year, the Group invested £18 million in data platforms and machine learning capabilities.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+- text: Our AI-enabled diagnostic imaging software received FDA clearance in May 2024.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+- text: Generative AI could be used by threat actors to craft more convincing phishing emails targeting our employees.
+  section: 10-K:1C
+  state: NO_CLAIM
+  batch: 2
+- text: We use a machine-learning recommendation engine to personalise offers in our mobile app, which now has 3.2 million active users.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+- text: Our Board receives quarterly updates on AI risk and our responsible AI framework.
+  section: full
+  state: WEAK
+  batch: 2
+- text: We may incorporate generative AI into our products in the future.
+  section: 10-K:1
+  state: WEAK
+  batch: 2
+- text: The Company relies on cloud providers such as Microsoft Azure OpenAI Service to host its AI applications.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+- text: Artificial intelligence is increasingly used in the insurance industry to price risk.
+  section: full
+  state: NO_CLAIM
+  batch: 2
+- text: We believe that AI will transform how our customers manage their supply chains.
+  section: 10-K:1
+  state: NO_CLAIM
+  batch: 2
+- text: In 2023 we acquired Lumen Analytics, whose computer vision platform inspects 1.5 million parcels per day.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+- text: Our use of artificial intelligence is at an early stage.
+  section: full
+  state: WEAK
+  batch: 2
+- text: We train our own small language models on anonymised transaction data to categorise customer spending.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+- text: Competitors that adopt AI more quickly than we do could gain a cost advantage.
+  section: 10-K:1A
+  state: NO_CLAIM
+  batch: 2
+- text: We do not currently use AI in our underwriting decisions, but we may do so in the future.
+  section: 10-K:1A
+  state: WEAK
+  batch: 2
+  known_limitation: true
+- text: Revenue from our AI platform subscriptions increased 52% to $340 million.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+- text: Regulators in the EU and the United States have proposed rules governing the use of AI in credit decisions.
+  section: full
+  state: NO_CLAIM
+  batch: 2
+- text: AI is a key enabler of our strategy.
+  section: full
+  state: WEAK
+  batch: 2
+- text: Developments in artificial intelligence may require us to make significant investments in new technologies.
+  section: 10-K:1A
+  state: WEAK
+  batch: 2
+- text: Our digital agents resolved 2.4 million customer conversations without human involvement in 2024.
+  section: full
+  state: SUBSTANTIVE
+  batch: 2
+- text: Insurance agents and brokers distribute most of our policies.
+  section: full
+  state: NO_CLAIM
+  batch: 2

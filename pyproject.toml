@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aidisclose"
+version = "0.5.3"
+description = "Measure reported AI adoption claims in corporate disclosures beyond keyword counts"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Liufang Wang", email = "qq1055145729@gmail.com" },
+    { name = "Xiangyang Sun", email = "sunx200002@gmail.com" },  # corresponding author
+]
+keywords = [
+    "artificial intelligence", "AI adoption", "corporate disclosure", "annual reports", "text analysis",
+    "10-K", "20-F", "ESEF", "measurement", "economics", "finance",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Text Processing :: Linguistic",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "requests>=2.28",
+    "beautifulsoup4>=4.11",
+    "lxml>=4.9",
+    "PyYAML>=6.0",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+ml = ["scikit-learn>=1.2", "joblib>=1.2"]
+pdf = ["pypdf>=3.0"]
+# experimental backend; large downloads
+transformers = ["transformers>=4.40", "torch>=2.2"]
+docs = ["mkdocs>=1.5,<2", "mkdocs-material>=9.5"]
+dev = ["pytest>=7", "pytest-cov>=4", "ruff>=0.4"]
+all = ["aidisclose[ml,pdf]"]
+
+[project.scripts]
+aidisclose = "aidisclose.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+aidisclose = ["py.typed", "lexicon/data/*.yaml", "demo/data/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501", "B008", "B905", "UP007", "UP045"]

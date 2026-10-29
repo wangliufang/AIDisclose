@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+# Author names verified; Xiangyang Sun is the corresponding author.
+authors:
+  - name: "Liufang Wang"
+    affiliation: "College of Social Science, Yeungnam University, Gyeongsan-si, Gyeongbuk 38541, Republic of Korea"
+    email: "qq1055145729@gmail.com"
+  # Xiangyang Sun is the corresponding author.
+  - name: "Xiangyang Sun"
+    affiliation: "College of Business Administration, Changshin University, 262 Paryong-ro, Masanhoewon-gu Changwon-si, Gyeongsangnam-do 51352, Republic of Korea"
+    email: "sunx200002@gmail.com"
+message: "If you use this software, please cite it as below."
+title: "AIDisclose: measuring AI adoption claims in corporate disclosures"
+version: 0.5.3
+date-released: "2026-10-27"
+license: MIT
+keywords:
+  - artificial intelligence
+  - AI adoption
+  - corporate disclosure
+  - annual reports
+  - text analysis

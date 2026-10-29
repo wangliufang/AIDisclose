@@ -1,0 +1,134 @@
+{
+ "data": [
+  {
+   "type": "filing",
+   "id": "101",
+   "attributes": {
+    "period_end": "2023-12-31",
+    "country": "DK",
+    "fxo_id": "TESTLEI000000000001-2023-12-31-ESEF-DK-0",
+    "date_added": "2024-03-15 00:00:00",
+    "processed": "2024-04-01 10:00:00",
+    "published": null,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "viewer_url": "/TESTLEI000000000001/2023-12-31/ESEF/DK/0/vantage-2023-12-31-en/reports/ixbrlviewer.html",
+    "package_url": "/TESTLEI000000000001/2023-12-31/ESEF/DK/0/vantage-2023-12-31-en.zip",
+    "report_url": "/TESTLEI000000000001/2023-12-31/ESEF/DK/0/vantage-2023-12-31-en/reports/vantage-2023-12-31-en.xhtml",
+    "json_url": "/TESTLEI000000000001/2023-12-31/ESEF/DK/0/vantage-2023-12-31-en.json",
+    "error_count": 0,
+    "warning_count": 0,
+    "inconsistency_count": 0
+   },
+   "relationships": {
+    "entity": {
+     "links": {
+      "related": "/api/entities/TESTLEI000000000001"
+     },
+     "data": {
+      "type": "entity",
+      "id": "1"
+     }
+    }
+   },
+   "links": {
+    "self": "/api/filings/101"
+   }
+  },
+  {
+   "type": "filing",
+   "id": "102",
+   "attributes": {
+    "period_end": "2023-12-31",
+    "country": "DK",
+    "fxo_id": "TESTLEI000000000001-2023-12-31-ESEF-DK-0",
+    "date_added": "2024-03-15 00:00:00",
+    "processed": "2024-04-01 11:00:00",
+    "published": null,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "viewer_url": "/TESTLEI000000000001/2023-12-31/ESEF/DK/0/vantage-2023-12-31-da/reports/ixbrlviewer.html",
+    "package_url": "/TESTLEI000000000001/2023-12-31/ESEF/DK/0/vantage-2023-12-31-da.zip",
+    "report_url": "/TESTLEI000000000001/2023-12-31/ESEF/DK/0/vantage-2023-12-31-da/reports/vantage-2023-12-31-da.xhtml",
+    "json_url": "/TESTLEI000000000001/2023-12-31/ESEF/DK/0/vantage-2023-12-31-da.json",
+    "error_count": 0,
+    "warning_count": 0,
+    "inconsistency_count": 0
+   },
+   "relationships": {
+    "entity": {
+     "links": {
+      "related": "/api/entities/TESTLEI000000000001"
+     },
+     "data": {
+      "type": "entity",
+      "id": "1"
+     }
+    }
+   },
+   "links": {
+    "self": "/api/filings/102"
+   }
+  },
+  {
+   "type": "filing",
+   "id": "103",
+   "attributes": {
+    "period_end": "2023-12-31",
+    "country": "DK",
+    "fxo_id": "TESTLEI000000000002-2023-12-31-ESEF-DK-0",
+    "date_added": "2024-03-15 00:00:00",
+    "processed": "2024-04-02 10:00:00",
+    "published": null,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "viewer_url": "/TESTLEI000000000002/2023-12-31/ESEF/DK/0/fjord-2023-12-31-da/reports/ixbrlviewer.html",
+    "package_url": "/TESTLEI000000000002/2023-12-31/ESEF/DK/0/fjord-2023-12-31-da.zip",
+    "report_url": "/TESTLEI000000000002/2023-12-31/ESEF/DK/0/fjord-2023-12-31-da/reports/fjord-2023-12-31-da.xhtml",
+    "json_url": "/TESTLEI000000000002/2023-12-31/ESEF/DK/0/fjord-2023-12-31-da.json",
+    "error_count": 0,
+    "warning_count": 0,
+    "inconsistency_count": 0
+   },
+   "relationships": {
+    "entity": {
+     "links": {
+      "related": "/api/entities/TESTLEI000000000002"
+     },
+     "data": {
+      "type": "entity",
+      "id": "2"
+     }
+    }
+   },
+   "links": {
+    "self": "/api/filings/103"
+   }
+  }
+ ],
+ "links": {
+  "self": "https://filings.xbrl.org/api/filings?page%5Bnumber%5D=1",
+  "next": "https://filings.xbrl.org/api/filings?page%5Bnumber%5D=2"
+ },
+ "meta": {
+  "count": 4
+ },
+ "included": [
+  {
+   "type": "entity",
+   "id": "1",
+   "attributes": {
+    "identifier": "TESTLEI000000000001",
+    "name": "Vantage Retail Group A/S"
+   }
+  },
+  {
+   "type": "entity",
+   "id": "2",
+   "attributes": {
+    "identifier": "TESTLEI000000000002",
+    "name": "Fjord Shipping A/S"
+   }
+  }
+ ],
+ "jsonapi": {
+  "version": "1.0"
+ }
+}

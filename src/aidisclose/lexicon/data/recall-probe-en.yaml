@@ -1,0 +1,87 @@
+# AIDisclose recall-probe lexicon (English)
+#
+# Broad terms that often accompany AI claims but are NOT AI terms in
+# themselves. They are never used to measure adoption. The pipeline uses them
+# only to over-sample, for the recall audit, sentences that the measurement
+# lexicon did not retrieve: sentences with a probe hit but no hit of the
+# measurement or baseline lexicon form the "probe" stratum of the recall pool,
+# all other sentences the "random" stratum (see docs/validation.md).
+name: recall-probe-en
+version: "1.0.0"
+language: en
+description: Broad AI-adjacent terms used to stratify the recall audit (not a measurement lexicon).
+terms:
+  - id: algorithm
+    pattern: 'algorithm(?:s|ic|ically)?'
+    category: probe
+    tier: probe
+  - id: automation
+    pattern: 'automat(?:ed|ion|ing|es?)'
+    category: probe
+    tier: probe
+  - id: intelligent
+    pattern: 'intelligent(?:ly)?'
+    category: probe
+    tier: probe
+  - id: smart
+    pattern: 'smart\s+(?:assistants?|systems?|technolog(?:y|ies)|automation|search|routing|devices?|factor(?:y|ies)|sensors?)'
+    category: probe
+    tier: probe
+  - id: predictive
+    pattern: 'predictive|prediction\s+models?|forecasting\s+models?|propensity\s+models?|scoring\s+models?'
+    category: probe
+    tier: probe
+  - id: analytics
+    pattern: '(?:advanced|predictive|prescriptive|big\s+data|data)\s+analytics|data[\s-]+driven|data\s+scien\w+'
+    category: probe
+    tier: probe
+  - id: model_training
+    pattern: '(?:trained|training|retrain\w*)\s+(?:on|our|the|its|a)\s+(?:[\w-]+\s+){0,2}(?:models?|data|datasets?)|models?\s+(?:trained|training)'
+    category: probe
+    tier: probe
+  - id: robotics
+    pattern: 'robot(?:s|ic|ics)?|cobots?'
+    category: probe
+    tier: probe
+  - id: bots
+    pattern: '(?:chat|voice|software|virtual|digital)?\s?bots?|virtual\s+agents?|digital\s+(?:humans?|employees?|workers?)'
+    category: probe
+    tier: probe
+  - id: autonomous
+    pattern: 'autonomous(?:ly)?|self[\s-]+(?:learning|driving|optimi[sz]ing|healing)'
+    category: probe
+    tier: probe
+  - id: cognitive
+    pattern: 'cognitive|neural|neuro-?symbolic'
+    category: probe
+    tier: probe
+  - id: assistants
+    pattern: 'assistants?|co-?pilots?'
+    category: probe
+    tier: probe
+  - id: recognition
+    pattern: '(?:pattern|character|optical|handwriting|text|voice|speech|image|object|facial|licen[cs]e\s+plate)\s+recognition|OCR|vision\s+systems?'
+    category: probe
+    tier: probe
+  - id: digital_twin
+    pattern: 'digital\s+twins?|simulation\s+models?'
+    category: probe
+    tier: probe
+  - id: personalisation
+    pattern: 'personali[sz](?:ation|ed|e|es|ing)|(?:personalised|personalized|product|tailored)\s+recommendations?'
+    category: probe
+    tier: probe
+  - id: generative
+    pattern: 'generative|synthetic\s+(?:data|media|voices?)|deep\s?fakes?'
+    category: probe
+    tier: probe
+  - id: compute
+    pattern: 'GPUs?|accelerated\s+computing|inference|data\s+cent(?:er|re)s?|high[\s-]+performance\s+computing|supercomput\w+'
+    category: probe
+    tier: probe
+  - id: model_names
+    # bare product names that the measurement lexicon matches only in specific forms
+    pattern: 'Gemini|Claude|Watson|Einstein|Bedrock|Llama|Mistral|Copilot|Alexa|Siri|Cortana|Bard|Grok|Perplexity'
+    case_sensitive: true
+    category: probe
+    tier: probe

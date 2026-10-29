@@ -1,0 +1,58 @@
+{
+ "data": [
+  {
+   "type": "filing",
+   "id": "104",
+   "attributes": {
+    "period_end": "2024-03-31",
+    "country": "GB",
+    "fxo_id": "TESTLEI000000000003-2024-03-31-UKSEF-GB-0",
+    "date_added": "2024-03-15 00:00:00",
+    "processed": "2024-07-01 09:00:00",
+    "published": null,
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "viewer_url": "/TESTLEI000000000003/2024-03-31/UKSEF/GB/0/kestrel_annual_report_2024/reports/ixbrlviewer.html",
+    "package_url": "/TESTLEI000000000003/2024-03-31/UKSEF/GB/0/kestrel_annual_report_2024.zip",
+    "report_url": "/TESTLEI000000000003/2024-03-31/UKSEF/GB/0/kestrel_annual_report_2024/reports/kestrel_annual_report_2024.xhtml",
+    "json_url": "/TESTLEI000000000003/2024-03-31/UKSEF/GB/0/kestrel_annual_report_2024.json",
+    "error_count": 0,
+    "warning_count": 0,
+    "inconsistency_count": 0
+   },
+   "relationships": {
+    "entity": {
+     "links": {
+      "related": "/api/entities/TESTLEI000000000003"
+     },
+     "data": {
+      "type": "entity",
+      "id": "3"
+     }
+    }
+   },
+   "links": {
+    "self": "/api/filings/104"
+   }
+  }
+ ],
+ "links": {
+  "self": "https://filings.xbrl.org/api/filings?page%5Bnumber%5D=2",
+  "next": null
+ },
+ "meta": {
+  "count": 4
+ },
+ "included": [
+  {
+   "type": "entity",
+   "id": "3",
+   "attributes": {
+    "identifier": "TESTLEI000000000003",
+    "name": "Kestrel Software plc"
+   }
+  }
+ ],
+ "jsonapi": {
+  "version": "1.0"
+ }
+}

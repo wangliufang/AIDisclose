@@ -1,0 +1,43 @@
+{
+ "cik": "0009999903",
+ "entityType": "operating",
+ "sic": "4011",
+ "sicDescription": "Railroads, Line-Haul Operating",
+ "name": "MAPLE RAIL CORP",
+ "tickers": [],
+ "exchanges": [
+  "NYSE"
+ ],
+ "fiscalYearEnd": "1231",
+ "addresses": {
+  "mailing": {
+   "stateOrCountry": "A6"
+  },
+  "business": {
+   "stateOrCountry": "A6"
+  }
+ },
+ "filings": {
+  "recent": {
+   "accessionNumber": [
+    "0009999903-25-000005"
+   ],
+   "filingDate": [
+    "2025-02-28"
+   ],
+   "reportDate": [
+    "2024-12-31"
+   ],
+   "form": [
+    "40-F"
+   ],
+   "primaryDocument": [
+    "mrc-40f2024.htm"
+   ],
+   "primaryDocDescription": [
+    "40-F"
+   ]
+  },
+  "files": []
+ }
+}

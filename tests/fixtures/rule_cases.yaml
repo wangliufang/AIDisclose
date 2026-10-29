@@ -1,0 +1,179 @@
+# Developer-written example sentences illustrating the codebook decision rules.
+# They are unit tests for the rule backend, NOT a validation benchmark: every
+# sentence was written by the developers, and companies are fictional.
+# Fields: text, expected state, optional reason, firm, section, prev.
+- text: "We use machine learning models to detect fraudulent card transactions in real time."
+  state: SUBSTANTIVE
+  reason: DEPLOYMENT
+- text: "Our AI-powered routing engine reduced fuel consumption by 7% in 2023."
+  state: SUBSTANTIVE
+- text: "In 2024 we launched Harbor Assist, a generative AI assistant for claims adjusters."
+  state: SUBSTANTIVE
+  reason: PRODUCT
+- text: "We acquired DataMind Ltd., a machine learning start-up, for $45 million."
+  state: SUBSTANTIVE
+  reason: INVESTMENT
+- text: "We hold 37 patents related to computer vision for quality inspection."
+  state: SUBSTANTIVE
+  reason: INVESTMENT
+- text: "Machine learning models developed by our data science team now price approximately 60% of new policies."
+  state: SUBSTANTIVE
+- text: "Our underwriting platform uses artificial intelligence to assess credit risk for small business loans."
+  state: SUBSTANTIVE
+- text: "We continue to use deep learning to improve defect detection on our production lines."
+  state: SUBSTANTIVE
+- text: "Northwind deployed AI-based demand forecasting across 120 distribution centers."
+  firm: "Northwind Logistics Inc."
+  state: SUBSTANTIVE
+- text: "Customer inquiries are now handled by a chatbot built on a large language model."
+  prev: "We redesigned our contact center during the year."
+  state: SUBSTANTIVE
+- text: "We sell AI accelerators to data center operators, and revenue from these chips grew 40%."
+  state: SUBSTANTIVE
+  reason: PRODUCT
+- text: "We help our clients deploy machine learning for anti-money laundering compliance monitoring."
+  state: SUBSTANTIVE
+  reason: PRODUCT
+# ---------------------------------------------------------------- WEAK
+- text: "We plan to use artificial intelligence to enhance our customer experience."
+  state: WEAK
+  reason: FORWARD_LOOKING
+- text: "We are exploring how generative AI could improve productivity across the organization."
+  state: WEAK
+  reason: FORWARD_LOOKING
+- text: "We intend to invest in AI capabilities over the coming years."
+  state: WEAK
+  reason: FORWARD_LOOKING
+- text: "We are piloting a machine learning tool in two of our plants."
+  state: WEAK
+  reason: FORWARD_LOOKING
+- text: "We may use AI in our products and services."
+  state: WEAK
+  reason: HEDGED
+- text: "We use AI across our business."
+  state: WEAK
+  reason: VAGUE
+- text: "We are an AI-first company."
+  state: WEAK
+- text: "AI is central to our strategy."
+  state: WEAK
+- text: "Our use of artificial intelligence may result in reputational harm or liability."
+  section: "10-K:1A"
+  state: WEAK
+  reason: RISK_BOILERPLATE
+- text: "If our AI models contain errors or biases, our business could be adversely affected."
+  section: "10-K:1A"
+  state: WEAK
+  reason: RISK_BOILERPLATE
+- text: "We may not be successful in our artificial intelligence initiatives."
+  section: "10-K:1A"
+  state: WEAK
+  reason: RISK_BOILERPLATE
+- text: "Our use of AI is subject to evolving laws and regulations."
+  state: WEAK
+- text: "We expect to deploy generative AI tools in our call centers next year."
+  state: WEAK
+  reason: FORWARD_LOOKING
+- text: "We have begun evaluating machine learning for predictive maintenance."
+  state: WEAK
+  reason: FORWARD_LOOKING
+# ------------------------------------------------------------ NO_CLAIM
+- text: "Artificial intelligence is transforming the insurance industry."
+  state: NO_CLAIM
+  reason: MARKET_TREND
+- text: "Our competitors may use AI to offer lower prices."
+  state: NO_CLAIM
+  reason: THIRD_PARTY
+- text: "Competitors with greater resources are investing heavily in artificial intelligence."
+  state: NO_CLAIM
+  reason: THIRD_PARTY
+- text: "Threat actors increasingly use AI to craft more convincing phishing attacks."
+  state: NO_CLAIM
+  reason: THIRD_PARTY
+- text: "The EU AI Act imposes new obligations on providers of high-risk AI systems."
+  state: NO_CLAIM
+  reason: REGULATORY
+- text: "We are subject to emerging laws governing the use of artificial intelligence."
+  state: NO_CLAIM
+  reason: REGULATORY
+- text: "We do not currently use artificial intelligence in our underwriting decisions."
+  state: NO_CLAIM
+  reason: NEGATED
+- text: "We have not deployed generative AI in any customer-facing application."
+  state: NO_CLAIM
+  reason: NEGATED
+- text: "We believe AI is reshaping the markets in which we operate."
+  state: NO_CLAIM
+  reason: MARKET_TREND
+- text: "Artificial Intelligence"
+  state: NO_CLAIM
+  reason: GENERIC
+- text: "Customers are increasingly adopting machine learning tools from cloud providers."
+  state: NO_CLAIM
+  reason: THIRD_PARTY
+- text: "Regulators have issued guidance on the use of AI in credit decisions."
+  state: NO_CLAIM
+- text: "Growing adoption of AI across the economy is increasing demand for electricity."
+  state: NO_CLAIM
+# Mixed sentences: the strongest hit wins
+- text: "We have not yet deployed generative AI broadly, but we use machine learning to flag suspicious payments."
+  state: SUBSTANTIVE
+- text: "While competitors tout AI, we use machine learning only for inventory forecasting at 40 stores."
+  state: SUBSTANTIVE
+# Added after independent review (regulatory names, suppliers, firm possessives)
+- text: "The EU AI Act applies to our credit scoring models."
+  state: NO_CLAIM
+  reason: REGULATORY
+- text: "The AI Act entered into force in 2024 and applies to our operations."
+  state: NO_CLAIM
+  reason: REGULATORY
+- text: "We comply with the EU AI Act and use machine learning to detect fraud in 2 million payments."
+  state: SUBSTANTIVE
+- text: "We use third-party AI models to automate 30% of invoice processing."
+  state: SUBSTANTIVE
+  reason: DEPLOYMENT
+- text: "Competitors use third-party AI models to cut prices."
+  state: NO_CLAIM
+  reason: THIRD_PARTY
+- text: "Delta Bank's machine learning models screened 2.3 million transactions for fraud in 2024."
+  firm: "Delta Bank plc"
+  state: SUBSTANTIVE
+- text: "Our AI programme, launched in 2023, targets customer service."
+  state: WEAK
+# ------------------------------------------------------- codebook v1.1 (rules 1.1.0)
+- text: "We license computer vision models from an external vendor and run them on our parcel sorting lines."
+  state: SUBSTANTIVE
+  reason: DEPLOYMENT
+- text: "We license our machine learning fraud models to regional banks."
+  state: SUBSTANTIVE
+  reason: PRODUCT
+- text: "Our developers use GitHub Copilot."
+  state: SUBSTANTIVE
+- text: "We deployed agentic AI to automate invoice matching."
+  state: SUBSTANTIVE
+- text: "The development and use of AI presents risks that may result in reputational harm."
+  section: "10-K:1A"
+  state: WEAK
+  reason: RISK_BOILERPLATE
+- text: "The development and use of AI presents risks that may result in reputational harm."
+  section: "full"
+  state: NO_CLAIM
+- text: "We cannot predict the impact of AI on demand for our products."
+  section: "10-K:1A"
+  state: NO_CLAIM
+  reason: MARKET_TREND
+- text: "It remains uncertain how generative AI will affect the labour market."
+  state: NO_CLAIM
+- text: "RAG status reports are reviewed by the audit committee every month."
+  state: NO_CLAIM
+  reason: FALSE_POSITIVE
+- text: "The use of AI by our competitors may harm our competitive position."
+  section: "10-K:1A"
+  state: NO_CLAIM
+  reason: THIRD_PARTY
+- text: "The use of artificial intelligence in our underwriting may expose us to regulatory scrutiny."
+  section: "10-K:1A"
+  state: WEAK
+  reason: RISK_BOILERPLATE
+- text: "Our employees use ChatGPT Enterprise to summarise research notes."
+  state: SUBSTANTIVE

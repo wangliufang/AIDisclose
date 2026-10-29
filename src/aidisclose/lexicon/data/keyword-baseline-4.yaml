@@ -1,0 +1,28 @@
+# Minimal four-term keyword baseline ("artificial intelligence", "machine
+# learning", "AI", "ML"). This is the kind of short core keyword list commonly
+# used to retrieve AI-related text from annual reports. It is applied WITHOUT
+# any disambiguation so that it reproduces a plain keyword-count measure, which
+# AIDisclose reports alongside its own multi-state indicators.
+name: keyword-baseline-4
+version: "1.0.0"
+language: en
+description: Plain four-term keyword baseline without disambiguation.
+terms:
+  - id: artificial_intelligence
+    pattern: 'artificial[\s-]+intelligence'
+    category: general
+    tier: core
+  - id: machine_learning
+    pattern: 'machine[\s-]+learning'
+    category: ml
+    tier: core
+  - id: ai_acronym
+    pattern: 'AI'
+    case_sensitive: true
+    category: general
+    tier: core
+  - id: ml_acronym
+    pattern: 'ML'
+    case_sensitive: true
+    category: ml
+    tier: core

@@ -1,0 +1,43 @@
+{
+ "cik": "0009999904",
+ "entityType": "operating",
+ "sic": "2000",
+ "sicDescription": "Food and Kindred Products",
+ "name": "LAKESIDE FOODS CO",
+ "tickers": [],
+ "exchanges": [
+  "NYSE"
+ ],
+ "fiscalYearEnd": "1231",
+ "addresses": {
+  "mailing": {
+   "stateOrCountry": "WI"
+  },
+  "business": {
+   "stateOrCountry": "WI"
+  }
+ },
+ "filings": {
+  "recent": {
+   "accessionNumber": [
+    "0009999904-25-000002"
+   ],
+   "filingDate": [
+    "2025-03-01"
+   ],
+   "reportDate": [
+    "2024-12-31"
+   ],
+   "form": [
+    "10-K"
+   ],
+   "primaryDocument": [
+    "lsf-20241231.htm"
+   ],
+   "primaryDocDescription": [
+    "10-K"
+   ]
+  },
+  "files": []
+ }
+}

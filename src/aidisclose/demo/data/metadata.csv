@@ -1,0 +1,22 @@
+file,firm_id,firm_name,fiscal_year,country,industry_code,industry_scheme,form,period_end
+bluefield_2022_10-K.htm,bluefield,Bluefield Agritech Corp.,2022,US,0200,SIC,10-K,2022-12-31
+bluefield_2023_10-K.htm,bluefield,Bluefield Agritech Corp.,2023,US,0200,SIC,10-K,2023-12-31
+bluefield_2024_10-K.htm,bluefield,Bluefield Agritech Corp.,2024,US,0200,SIC,10-K,2024-12-31
+crescent_2022_annual-report.xhtml,crescent,Crescent Pharma N.V.,2022,NL,C,NACE,annual-report,2022-12-31
+crescent_2023_annual-report.xhtml,crescent,Crescent Pharma N.V.,2023,NL,C,NACE,annual-report,2023-12-31
+crescent_2024_annual-report.xhtml,crescent,Crescent Pharma N.V.,2024,NL,C,NACE,annual-report,2024-12-31
+harbor_2022_10-K.htm,harbor,Harbor Mutual Insurance Co.,2022,US,6331,SIC,10-K,2022-12-31
+harbor_2023_10-K.htm,harbor,Harbor Mutual Insurance Co.,2023,US,6331,SIC,10-K,2023-12-31
+harbor_2024_10-K.htm,harbor,Harbor Mutual Insurance Co.,2024,US,6331,SIC,10-K,2024-12-31
+kestrel_2022_annual-report.xhtml,kestrel,Kestrel Software plc,2022,GB,J,NACE,annual-report,2022-12-31
+kestrel_2023_annual-report.xhtml,kestrel,Kestrel Software plc,2023,GB,J,NACE,annual-report,2023-12-31
+kestrel_2024_annual-report.xhtml,kestrel,Kestrel Software plc,2024,GB,J,NACE,annual-report,2024-12-31
+northwind_2022_10-K.htm,northwind,Northwind Logistics Inc.,2022,US,4213,SIC,10-K,2022-12-31
+northwind_2023_10-K.htm,northwind,Northwind Logistics Inc.,2023,US,4213,SIC,10-K,2023-12-31
+northwind_2024_10-K.htm,northwind,Northwind Logistics Inc.,2024,US,4213,SIC,10-K,2024-12-31
+tasman_2023_20-F.htm,tasman,Tasman Freight Ltd,2023,AU,H,NACE,20-F,2023-12-31
+tasman_2024_20-F.htm,tasman,Tasman Freight Ltd,2024,AU,H,NACE,20-F,2024-12-31
+vantage_2022_annual-report.xhtml,vantage,Vantage Retail Group A/S,2022,DK,G,NACE,annual-report,2022-12-31
+vantage_2023_annual-report.xhtml,vantage,Vantage Retail Group A/S,2023,DK,G,NACE,annual-report,2023-12-31
+vantage_2024_annual-report.xhtml,vantage,Vantage Retail Group A/S,2024,DK,G,NACE,annual-report,2024-12-31
+rheinwerk_2023_geschaeftsbericht.html,rheinwerk,Rheinwerk Maschinenbau AG,2023,DE,C,NACE,annual-report,2023-12-31

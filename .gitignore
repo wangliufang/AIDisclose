@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+site/
+.aidisclose_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+aidisclose-demo/
+demo-output/

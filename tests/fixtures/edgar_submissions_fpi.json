@@ -1,0 +1,55 @@
+{
+ "cik": "0009999902",
+ "entityType": "operating",
+ "sic": "7372",
+ "sicDescription": "Services-Prepackaged Software",
+ "name": "ALBION ANALYTICS PLC",
+ "tickers": [],
+ "exchanges": [
+  "NYSE"
+ ],
+ "fiscalYearEnd": "1231",
+ "addresses": {
+  "mailing": {
+   "stateOrCountry": "X0"
+  },
+  "business": {
+   "stateOrCountry": "X0"
+  }
+ },
+ "filings": {
+  "recent": {
+   "accessionNumber": [
+    "0009999902-25-000003",
+    "0009999902-25-000001",
+    "0009999902-24-000002"
+   ],
+   "filingDate": [
+    "2025-03-20",
+    "2025-01-15",
+    "2024-03-22"
+   ],
+   "reportDate": [
+    "2024-12-31",
+    "",
+    "2023-12-31"
+   ],
+   "form": [
+    "20-F",
+    "6-K",
+    "20-F"
+   ],
+   "primaryDocument": [
+    "alb-20241231x20f.htm",
+    "alb-6k.htm",
+    "alb-20231231x20f.htm"
+   ],
+   "primaryDocDescription": [
+    "20-F",
+    "6-K",
+    "20-F"
+   ]
+  },
+  "files": []
+ }
+}

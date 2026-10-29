@@ -1,0 +1,137 @@
+{
+ "version": "2.0",
+ "class": "dataset",
+ "label": "TEST FIXTURE - synthetic values in the isoc_eb_ai layout",
+ "source": "synthetic",
+ "id": [
+  "freq",
+  "size_emp",
+  "nace_r2",
+  "indic_is",
+  "unit",
+  "geo",
+  "time"
+ ],
+ "size": [
+  1,
+  2,
+  1,
+  1,
+  1,
+  5,
+  2
+ ],
+ "value": {
+  "0": 15.0,
+  "1": 25.0,
+  "2": 4.0,
+  "3": 6.0,
+  "4": 13.0,
+  "5": 20.0,
+  "6": 1.5,
+  "7": 3.0,
+  "8": 8.0,
+  "9": 13.0,
+  "10": 40.0,
+  "11": 50.0,
+  "12": 10.0,
+  "13": 15.0,
+  "14": 30.0,
+  "15": 45.0,
+  "16": 5.0,
+  "17": 8.0,
+  "18": 30.0,
+  "19": 41.0
+ },
+ "dimension": {
+  "freq": {
+   "label": "Time frequency",
+   "category": {
+    "index": {
+     "A": 0
+    },
+    "label": {
+     "A": "Annual"
+    }
+   }
+  },
+  "size_emp": {
+   "label": "Size classes",
+   "category": {
+    "index": {
+     "GE10": 0,
+     "GE250": 1
+    },
+    "label": {
+     "GE10": "10 persons employed or more",
+     "GE250": "250 persons employed or more"
+    }
+   }
+  },
+  "nace_r2": {
+   "label": "NACE",
+   "category": {
+    "index": {
+     "C10-S951_X_K": 0
+    },
+    "label": {
+     "C10-S951_X_K": "All activities (excl. agriculture, mining, financial)"
+    }
+   }
+  },
+  "indic_is": {
+   "label": "Indicator",
+   "category": {
+    "index": {
+     "E_AI_TANY": 0
+    },
+    "label": {
+     "E_AI_TANY": "Enterprises use at least one of the AI technologies"
+    }
+   }
+  },
+  "unit": {
+   "label": "Unit",
+   "category": {
+    "index": {
+     "PC_ENT": 0
+    },
+    "label": {
+     "PC_ENT": "Percentage of enterprises"
+    }
+   }
+  },
+  "geo": {
+   "label": "Geo",
+   "category": {
+    "index": {
+     "DK": 0,
+     "EL": 1,
+     "NL": 2,
+     "RO": 3,
+     "EU27_2020": 4
+    },
+    "label": {
+     "DK": "DK",
+     "EL": "EL",
+     "NL": "NL",
+     "RO": "RO",
+     "EU27_2020": "EU27_2020"
+    }
+   }
+  },
+  "time": {
+   "label": "Time",
+   "category": {
+    "index": {
+     "2023": 0,
+     "2024": 1
+    },
+    "label": {
+     "2023": "2023",
+     "2024": "2024"
+    }
+   }
+  }
+ }
+}

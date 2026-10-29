@@ -1,0 +1,212 @@
+# AIDisclose English AI lexicon
+#
+# Anchor definition: an AI system is "a machine-based system that, for explicit
+# or implicit objectives, infers, from the input it receives, how to generate
+# outputs such as predictions, content, recommendations, or decisions that can
+# influence physical or virtual environments" (OECD, 2024).
+#
+# Field reference
+#   id                    unique term identifier (stable across versions)
+#   pattern               Python regular expression fragment; word boundaries are
+#                         added automatically
+#   case_sensitive        match case exactly (default: false)
+#   category              general | ml | genai | nlp | cv | automation
+#   tier                  core     -> terms whose dominant sense in corporate text
+#                                     is AI (used by default)
+#                         extended -> AI-adjacent terms (opt-in)
+#   ambiguous             term has frequent non-AI senses
+#   requires_cooccurrence keep the hit only if an unambiguous AI term occurs in
+#                         the same sentence (e.g. "ML", "NLP")
+#   negative_contexts     regular expressions (case-insensitive); if any matches
+#                         the sentence and no unambiguous AI term is present,
+#                         the hit is discarded as a false positive
+name: aidisclose-en
+version: "1.0.0"
+language: en
+description: >-
+  Default English lexicon of AI terms for corporate disclosures, organised by
+  technique category and tier.
+terms:
+  # ---------------------------------------------------------------- general
+  - id: artificial_intelligence
+    pattern: 'artificial[\s-]+intelligence'
+    category: general
+    tier: core
+  - id: ai_acronym
+    pattern: 'AIs?'
+    case_sensitive: true
+    category: general
+    tier: core
+    ambiguous: true
+    negative_contexts:
+      - 'artificial\s+insemination'
+      - 'avian\s+influenza|bird\s+flu'
+      - 'amnesty\s+international'
+      - 'additional(ly)?\s+insured'
+      - 'air\s+india'
+      - 'adobe\s+illustrator'
+      - 'aromatase\s+inhibitor'
+  - id: ai_dotted
+    pattern: 'A\.I\.'
+    case_sensitive: true
+    category: general
+    tier: core
+  - id: machine_intelligence
+    pattern: 'machine[\s-]+intelligence'
+    category: general
+    tier: core
+  - id: cognitive_computing
+    pattern: 'cognitive\s+(?:computing|automation)'
+    category: general
+    tier: extended
+  # --------------------------------------------------------------------- ml
+  - id: machine_learning
+    pattern: 'machine[\s-]+learn(?:ing|ed|t)'
+    category: ml
+    tier: core
+  - id: ml_acronym
+    pattern: 'ML'
+    case_sensitive: true
+    category: ml
+    tier: core
+    ambiguous: true
+    requires_cooccurrence: true
+  - id: deep_learning
+    pattern: 'deep[\s-]+learning'
+    category: ml
+    tier: core
+  - id: neural_network
+    pattern: '(?:(?:artificial|deep|convolutional|recurrent|graph)\s+)?neural[\s-]+net(?:work)?s?'
+    category: ml
+    tier: core
+    ambiguous: true
+    negative_contexts:
+      - '\bbrain\b|nervous\s+system|neuronal|neurolog'
+  - id: reinforcement_learning
+    pattern: 'reinforcement[\s-]+learning'
+    category: ml
+    tier: core
+  - id: supervised_learning
+    pattern: '(?:un|semi-?|self-?)?supervised[\s-]+learning'
+    category: ml
+    tier: core
+  - id: predictive_modelling
+    pattern: 'predictive\s+(?:models?|modell?ing|analytics)'
+    category: ml
+    tier: extended
+  - id: data_science
+    pattern: 'data\s+scien(?:ce|tists?)'
+    category: ml
+    tier: extended
+  # ------------------------------------------------------------------ genai
+  - id: generative_ai
+    pattern: 'generative\s+(?:AI|artificial\s+intelligence|models?|pre-?trained\s+transformers?)'
+    category: genai
+    tier: core
+  - id: genai_token
+    pattern: 'gen[\s-]?AI'
+    category: genai
+    tier: core
+  - id: large_language_model
+    pattern: 'large[\s-]+language[\s-]+models?'
+    category: genai
+    tier: core
+  - id: llm_acronym
+    pattern: 'LLMs?'
+    case_sensitive: true
+    category: genai
+    tier: core
+    ambiguous: true
+    negative_contexts:
+      - 'master\s+of\s+laws|LL\.\s?M\.'
+      - '\bLLM\b\s+(?:degree|program|in\s+tax)'
+  - id: foundation_model
+    pattern: 'foundation\s+models?'
+    category: genai
+    tier: core
+  - id: gpt
+    pattern: '(?:Chat)?GPT(?:-?\d(?:\.\d)?o?)?'
+    case_sensitive: true
+    category: genai
+    tier: core
+    ambiguous: true
+    negative_contexts:
+      - 'general[\s-]+purpose\s+technolog'
+  - id: openai
+    pattern: 'OpenAI'
+    case_sensitive: true
+    category: genai
+    tier: core
+  - id: transformer_model
+    pattern: 'transformer[\s-]+based\s+(?:language\s+)?models?'
+    category: genai
+    tier: core
+  - id: ai_assistant
+    pattern: '(?:virtual|digital|intelligent)\s+assistants?'
+    category: genai
+    tier: extended
+  - id: chatbot
+    pattern: 'chat[\s-]?bots?'
+    category: genai
+    tier: extended
+  - id: copilot
+    pattern: 'co-?pilots?'
+    category: genai
+    tier: extended
+    ambiguous: true
+    negative_contexts:
+      - 'aircraft|airline|flight|cockpit|aviation|\bpilots?\b'
+  # -------------------------------------------------------------------- nlp
+  - id: natural_language_processing
+    pattern: 'natural[\s-]+language[\s-]+(?:processing|understanding|generation|interfaces?)'
+    category: nlp
+    tier: core
+  - id: nlp_acronym
+    pattern: 'NLP'
+    case_sensitive: true
+    category: nlp
+    tier: core
+    ambiguous: true
+    requires_cooccurrence: true
+  - id: speech_recognition
+    pattern: '(?:automatic\s+)?(?:speech|voice)[\s-]+recognition'
+    category: nlp
+    tier: core
+  - id: conversational_ai
+    pattern: 'conversational\s+(?:AI|artificial\s+intelligence|agents?)'
+    category: nlp
+    tier: core
+  - id: text_analytics
+    pattern: 'text[\s-]+(?:mining|analytics)'
+    category: nlp
+    tier: extended
+  # --------------------------------------------------------------------- cv
+  - id: computer_vision
+    pattern: 'computer[\s-]+vision'
+    category: cv
+    tier: core
+  - id: machine_vision
+    pattern: 'machine[\s-]+vision'
+    category: cv
+    tier: core
+  - id: image_recognition
+    pattern: '(?:image|object|facial|face)[\s-]+(?:recognition|detection)'
+    category: cv
+    tier: core
+  # ------------------------------------------------------------- automation
+  - id: autonomous_systems
+    pattern: '(?:autonomous|self[\s-]+driving|driverless)\s+(?:vehicles?|cars?|trucks?|driving|mobile\s+robots?|robots?|systems?)'
+    category: automation
+    tier: extended
+  - id: robotic_process_automation
+    pattern: 'robotic\s+process\s+automation'
+    category: automation
+    tier: extended
+  - id: intelligent_automation
+    pattern: 'intelligent\s+(?:automation|process\s+automation|document\s+processing)'
+    category: automation
+    tier: extended
+  - id: recommender_system
+    pattern: 'recommend(?:ation|er)\s+(?:engines?|systems?|algorithms?)'
+    category: automation
+    tier: extended
