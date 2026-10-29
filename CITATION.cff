@@ -1,4 +1,5 @@
 cff-version: 1.2.0
+type: software
 # Author names verified; Xiangyang Sun is the corresponding author.
 authors:
   - name: "Liufang Wang"
@@ -10,7 +11,9 @@ authors:
     email: "sunx200002@gmail.com"
 message: "If you use this software, please cite it as below."
 title: "AIDisclose: measuring AI adoption claims in corporate disclosures"
-version: 0.5.3
+version: "0.5.3"
+doi: "10.5281/zenodo.23765023"
+url: "https://github.com/wangliufang/AIDisclose"
 date-released: "2026-10-27"
 license: MIT
 keywords:

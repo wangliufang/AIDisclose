@@ -1,5 +1,7 @@
 # AIDisclose
 
+[![DOI](https://zenodo.org/badge/1438331669.svg)](https://doi.org/10.5281/zenodo.23765022)
+
 **Measure substantive AI adoption claims in corporate disclosures, beyond keyword counts.**
 
 AIDisclose is an open-source Python package that retrieves corporate reports from
